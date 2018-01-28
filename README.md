@@ -16,7 +16,7 @@ Write a program to distribute the chocolate so that you make the minimum number 
 
 To solve the problem I mapped it to a minimum cost flow problem, see my blog post for more details. The cost of each "distribution channel" is given by the "distance" between available and required (chocolate) units: cost[i,j]= |B[i]-C[j]|/B[i]. In this way, assignements of resources that do not require a cut have 0 cost, so they always minimize the cost function (e.g. bar: 2 --> child: 2). The rest of the strategy is to make "less costly", configurations that are close to each other.
 
-Note: We count cuts in a slightly different way than what used in the example in the email. A cut is the number of times we break up the chocolate bar, so in the given example {2,5,7} --> {3,2,5,1}, the minimum cut is one instead of two as we have
+Note: A cut is the number of times we break up the chocolate bar, so in the given example {2,5,7} --> {3,2,5,1}, the minimum cut is one instead of two as we have
 
 |Bar | Units | Child|
 |----|-------|------|
@@ -25,8 +25,7 @@ Note: We count cuts in a slightly different way than what used in the example in
 | 3  |   3   |  1.  |
 | 3  |   1   |  4.  |
 
-So, bar 3 has been cut into two pieces with a single cut. The reason for this different way of counting is that it makes the
-numerical implementation more compact.
+So, bar 3 has been cut into two pieces with a single cut. 
 
 
 
