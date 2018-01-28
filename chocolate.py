@@ -45,7 +45,6 @@ in the command shell. For other operating system follows the instructions in the
 
 import numpy as np  #Numpy
 from ortools.constraint_solver import pywrapcp #google libraries for constrained optimization
-import networkx as nx #graph creation librrary
 
 
 #----------------------Helper functions-----------------------------------------
