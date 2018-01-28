@@ -18,10 +18,12 @@ To solve the problem I mapped it to a minimum cost flow problem, see my blog pos
 
 Note: We count cuts in a slightly different way than what used in the example in the email. A cut is the number of times we break up the chocolate bar, so in the given example {2,5,7} --> {3,2,5,1}, the minimum cut is one instead of two as we have
 
-Bar 1  assigned 2 units to child  2
-Bar 2  assigned 5 units to child  3
-Bar 3  assigned 3 units to child  1
-Bar 3  assigned 1 units to child  4
+|Bar | Units | Child|
+|----|-------|------|
+| 1  |   2   |  2   |
+| 2  |   5   |  3.  |  
+| 3  |   3   |  1.  |
+| 3  |   1   |  4.  |
 
 So, bar 3 has been cut into two pieces with a single cut. The reason for this different way of counting is that it makes the
 numerical implementation more compact.
